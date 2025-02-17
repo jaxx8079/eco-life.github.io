@@ -1,4 +1,4 @@
-Ideas Adresssing our Problem Statement:
+Ideas Addressing our Problem Statement:
 
  - Home Page: Introduction to the app and its purpose.
  - Eco-News: A place where environmental news and trends are posted
