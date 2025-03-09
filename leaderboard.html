@@ -3,55 +3,69 @@
     <head>
         <meta charset="UTF-8">
         <title>leaderboards</title>
-        <style>
-            body{
-                text-align: center;
-                line-height: 2;
-            }
-
-            p {
-                font-size: large;
-            }
-
-            hr{
-                width: 15%;
-            }
-            
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-
         <header>
-            <h1  >Leaderboard</h1>
+            <div id="topheader">
+            
+                <nav>
+                    <a href="index.html"><img src="./imageFolder/Capture_processed.PNG" alt="homepage button" width="150" height="50"></a>
+                    <a href="leaderboard.html">leaderboard</a>
+                    <a href="community.html">Community</a>
+                    <a href="maps.html">Eco-Maps</a>
+                    <a href="achievements.html">Achievements</a>
+                    <a href="ecostats.html">Eco-Stats</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About Us</a>
+                    <a href="login.html">Login</a>
+                </nav>  
+    
+            </div>
+            <h1 id="leaderTitle">Leaderboard</h1>
         </header>
 
-        <main>
-            <h3>As you complete more tasks daily you would rank up in eco-points which would help you to rank up on our eco boards. Top 3 ranking users would get a suprise from Eco-Life!</h3>
-            <hr style="width: 70%;">
-            <p>
-                1. John Doe<br>
-                <hr>
-                2. Ocean_saviour<br>
-                <hr>
-                3. Mr.Cleanup<br>
-                <hr>
-                4. Hell0_w0Rld<br>
-                <hr>
-                5. Triv4<br>
-                <hr>
-                6. ytytop45<br>
-                <hr>
-                7. GreenThumbJames<br>
-                <hr>
-                8. LoveWorld<br>
-                <hr>
-                9. Namesds<br>
-                <hr>
-                10. ParkLouil<br>
-                <hr>
-            </p>
-
-            <h2>Click here to see your ranking!</h2>
+        <main class="leaderboardPage">
+            <table id="leaderboardTable">
+                <tr>
+                   <th>Username</th> 
+                   <th>Eco-Points</th>
+                   <th>Rank</th>
+                </tr>
+                <tr>
+                    <td>
+                        JamieTheGreenFen12
+                    </td>
+                    <td>
+                        2,890,600 
+                    </td>
+                    <td>
+                        1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IAMGarden88 
+                    </td>
+                    <td>
+                        2,889,060
+                    </td>
+                    <td>
+                        2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IAMGROOT
+                    </td>
+                    <td>
+                        2,799,890
+                    </td>
+                    <td>
+                        3
+                    </td>
+                </tr>
+            </table>
         </main>
         
     </body>
