@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Community</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
+
     <body>
         <div id="topheader">
             
             <nav>
-                <a href="index.html"><img src="./imageFolder/Capture_processed.PNG" alt="homepage button" width="150" height="50"></a>
-                <a href="leaderboard.html">leaderboard</a>
+                <a href="index.html"><img src="./imageFolder/Capture_processed.PNG" alt="Home" width="150" height="50"></a>
+                <a href="leaderboard.html">Leaderboard</a>
                 <a href="community.html">Community</a>
                 <a href="maps.html">Eco-Maps</a>
                 <a href="achievements.html">Achievements</a>
@@ -20,31 +24,133 @@
 
         </div>
         <header>
-            <h1 style="text-align: center;">Community Talk</h1>
+            <h1 style="text-align: center;">Community Page</h1>
         </header>
         
         <main>
-            <div style="display: inline-block; align-items: center;">
-                <img style="margin-right: 20px; border-radius: 50%;" width="58px" height="50px" src="/images/images-exhibits-Magnificent_Tree_Frog_900_600_q85.jpg" alt="Profile Picture">
-                <p style="float: right; "><strong>Elisa Bark:</strong> Hey guys do you guys know the difference between recycling and waste?</p>
+            <div class="post">
+                <img src="/images/profile1.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>Elisa Bark:</strong> Hey guys do you guys know the difference between recycling and waste?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
             </div>
 
-            <div style="display: inline-block; align-items: center;">
-                <img style="margin-right: 20px; border-radius: 50%;" width="58px" height="50px" src="/images/images-exhibits-Magnificent_Tree_Frog_900_600_q85.jpg" alt="Profile Picture    ">
-                <p style="float: right; "><strong>Sophia_GreenLiving:</strong> Hey, everyone! What’s one eco-friendly habit you’ve recently started, and how has it helped?</p>
+            <div class="post">
+                <img src="/images/profile3.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>Sophia_GreenLiving:</strong> Hey, everyone! What’s one eco-friendly habit you’ve recently started, and how has it helped?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
             </div>
 
-            
-            
-            <p><strong>Sophia_GreenLiving:</strong> Hey, everyone! What’s one eco-friendly habit you’ve recently started, and how has it helped?</p>
-            <p><strong>EcoWarrior_77:</strong> I’ve cut down on single-use plastics by using silicone zip bags and reusable produce bags. It's made grocery shopping a lot more sustainable. What other ways can I reduce plastic in daily life?</p>            <p><strong>NatureNerd_Kai:</strong> That's awesome! I've been wondering: how effective are biodegradable trash bags? Are they really better for the environment?</p>
-            <p><strong>GreenTomato_Marc:</strong> Good question! I’ve heard mixed opinions on those. Can anyone share experience with composting at home? Does it really cut down on waste significantly?</p>
-            <p><strong>Zara_PlantPowered:</strong> Totally! Composting has been great for reducing food waste for me. I'm curious though, are there any creative ways to reuse food scraps instead of tossing them?</p>
-            <p><strong>Liam_SolarLife:</strong> I've started growing my own herbs using leftover vegetable scraps like scallion roots. Speaking of sustainability, do solar panels make sense for small apartments? What other ways can apartment dwellers save energy?</p>
-            <p><strong>EcoMindset_Leo:</strong> Great point! I'd like to know: are there eco-friendly cleaning products that actually work well for deep cleaning? I'm still using bleach occasionally and want to stop.</p>
-            <p><strong>NatureMama_Amy:</strong> Same here, Leo! I’ve been switching to vinegar and baking soda for most things. Are there any eco-friendly alternatives for laundry detergent that are both effective and affordable?</p>
-            <p><strong>PlanetProtector_Jane:</strong> That’s a good one! On the topic of laundry, does anyone know if cold water washing makes a noticeable difference in reducing energy use?</p>
-            <p><strong>OceanSaver_Aiden:</strong> Definitely curious about that too, Jane. I’ve been washing in cold water but not sure how much energy it’s actually saving. What are other underrated ways to save water at home?</p>
+            <div class="post">
+                <img src="/images/profile4.png" alt="Profile Picture">
+
+                <div class="post-content">
+                    <p><strong>EcoWarrior_77:</strong> I’ve cut down on single-use plastics by using silicone zip bags and reusable produce bags. It's made grocery shopping a lot more sustainable. What other ways can I reduce plastic in daily life?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="post">
+                <img src="/images/profile5.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>NatureNerd_Kai:</strong> That's awesome! I've been wondering: how effective are biodegradable trash bags? Are they really better for the environment?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile6.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>GreenTomato_Marc:</strong> Good question! I’ve heard mixed opinions on those. Can anyone share experience with composting at home? Does it really cut down on waste significantly?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile7.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>Zara_PlantPowered:</strong> Totally! Composting has been great for reducing food waste for me. I'm curious though, are there any creative ways to reuse food scraps instead of tossing them?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile8.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>Liam_SolarLife:</strong> I've started growing my own herbs using leftover vegetable scraps like scallion roots. Speaking of sustainability, do solar panels make sense for small apartments? What other ways can apartment dwellers save energy?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile9.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>EcoMindset_Leo:</strong> Great point! I'd like to know: are there eco-friendly cleaning products that actually work well for deep cleaning? I'm still using bleach occasionally and want to stop.</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile10.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>NatureMama_Amy:</strong> Same here, Leo! I’ve been switching to vinegar and baking soda for most things. Are there any eco-friendly alternatives for laundry detergent that are both effective and affordable?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile11.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>PlanetProtector_Jane:</strong> That’s a good one! On the topic of laundry, does anyone know if cold water washing makes a noticeable difference in reducing energy use?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/images/profile12.png" alt="Profile Picture">
+                <div class="post-content">
+                    <p><strong>OceanSaver_Aiden:</strong> Definitely curious about that too, Jane. I’ve been washing in cold water but not sure how much energy it’s actually saving. What are other underrated ways to save water at home?</p>
+                    <div class="buttons">
+                        <button class="like-btn">Like</button>
+                        <button class="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+
         </main>
         
     </body>

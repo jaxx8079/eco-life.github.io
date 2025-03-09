@@ -1,3 +1,88 @@
+/*
+General Styles
+*/
+
+body {
+    background-color: lightgreen;
+}
+
+/*
+Top Header
+*/
+
+#topheader{
+    background-color: #2C5F2D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex: 1;
+    margin: 0;
+    padding: 25px;
+}
+
+header {
+    text-align: center;
+    margin-top: 90px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #A7C957;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/*
+Homepage
+*/
+
+#mid {
+    background-color: lightgreen;
+    flex: 1;
+    justify-content: center;
+    justify-items: center;
+    padding: 150px;
+    margin: 0%;
+}
+
+#lower{
+    position: fixed;
+    background-color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#lower p {
+    text-align: center;
+}
+
+div h1{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+/*
+Leaderboard Stuff
+*/
+
 .leaderboardPage{
     flex: 1;
     justify-content: center;
@@ -27,4 +112,115 @@
     text-align: center;
     font-size: 40px;
     width: 100%;
+}
+
+/*
+Community Stuff
+*/
+
+.post {
+    background-color: #ffffff;
+    display: flex; 
+    align-items: flex-start;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 25px;
+}
+
+.post img {
+    margin-right: 20px; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.post p {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.like-btn, .reply-btn {
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.reply-btn {
+    background-color: rgb(69, 201, 102);
+}
+
+.like-btn {
+    background-color: rgb(37, 137, 245);
+}
+
+.reply-btn:hover {
+    background-color: rgb(34, 131, 59);
+}
+
+/*
+Maps
+*/
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.image-container img {
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
+}
+.image-container img.tall {
+    height: 500px;
+}
+
+/*
+Achievements
+*/
+.achv-table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.achv-card {
+    width: 50%;
+    background: green;
+    box-shadow: 2px 2px 10px black;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+.achv-img {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+}
+.achv-progress {
+    width: 90%;
+    height: 10px;
+}
+
+/*
+About
+*/
+
+.about-us {
+    text-align: center;
 }

@@ -2,22 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>
-            Achievements
-        </title>
-        <style>
-            p {
-                text-align: center;
-                font-size: large;
-            }
-        </style>
+        <title>Achievements</title>
+        <link rel="stylesheet" href="styles.css"> 
     </head>
     <body style="background-color: lightgreen;">
         <div id="topheader">
             
             <nav>
-                <a href="index.html"><img src="./imageFolder/Capture_processed.PNG" alt="homepage button" width="150" height="50"></a>
-                <a href="leaderboard.html">leaderboard</a>
+                <a href="index.html"><img src="./imageFolder/Capture_processed.PNG" alt="Home" width="150" height="50"></a>
+                <a href="leaderboard.html">Leaderboard</a>
                 <a href="community.html">Community</a>
                 <a href="maps.html">Eco-Maps</a>
                 <a href="achievements.html">Achievements</a>
@@ -33,90 +26,61 @@
         </header>
         
         <main>
-            <h3 style="text-align: center;">Achievement Completion</h3>
+            <h3 style="text-align: center;">Achievement Completion<br>
+            <progress value="0" max="3" style="width: 500px; text-align: center;"></progress></h3><br>
+            
             <p dis>
-                <br>
-                <progress value="0" max="3" style="width: 500px; text-align: center;"></progress>
-                <br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/wasteslayer.png" alt="trophy">
-                <br>
-                Waste Slayer
-                <br>
-                <span style="font-size: small;">Cleanup trash 10 times</span>
-                <br>
-                <progress value="0" max="10" ></progress>
-                <br>
-                <button type="button">Cleanup</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/greenhood.png" alt="trophy">
-                <br>
-                Eco Fanatic
-                <br>
-                <span style="font-size: small;">Check-in for 100 days</span>
-                <br>
-                <progress value="0" max="100" ></progress>
-                <br>
-                <button type="button">Check-in</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/profile2.png" alt="trophy">
-                <br>
-                Eco Hero
-                <br>
-                <span style="font-size: small;">Volunteer at your local recycling plant/other eco-friendly location</span>
-                <br>
-                <progress value="0" max="1" ></progress>
-                <br>
-                <button type="button">Volunteered</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/waterdrop.png" alt="trophy">
-                <br>
-                Shower Saver
-                <br>
-                <span style="font-size: small;">Shower for less than 8 minutes each day for a week</span>
-                <br>
-                <progress value="0" max="7" ></progress>
-                <br>
-                <button type="button">Showered</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/greenshield.png" alt="trophy">
-                <br>
-                Eco Protector
-                <br>
-                <span style="font-size: small;">Rescue an injured animal</span>
-                <br>
-                <progress value="0" max="10" ></progress>
-                <br>
-                <button type="button">Rescued</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/dumbbell.png" alt="trophy">
-                <br>
-                Eco Lifter
-                <br>
-                <span style="font-size: small;">Become number one eco-lifter on eco-life</span>
-                <br>
-                <progress value="0" max="1" ></progress>
-                <br>
-                <button type="button">Lifted</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/recycle.png" alt="trophy">
-                <br>
-                Recycle-lord
-                <br>
-                <span style="font-size: small;">Do 25 recycling tasks</span>
-                <br>
-                <progress value="0" max="25" ></progress>
-                <br>
-                <button type="button">Recycled</button>
-                <br><br><br>
-                <img style="border-radius: 50%;" width="65px" height="65px" src="images/greenthumb.png" alt="trophy">
-                <br>
-                Green Thumb
-                <br>
-                <span style="font-size: small;">Plant 10 trees</span>
-                <br>
-                <progress value="0" max="10" ></progress>
-                <br>
-                <button type="button">Planted</button>
+                <table class="achv-table">
+                    <tr>
+                        <td class="achv-card">
+                            <img class="achv-img" src="images/greenhood.png" alt="Eco Fanatic"><br>
+                            <b>Eco Fanatic</b><br>
+                            <span style="font-size: small;">Check-in for 100 days</span><br>
+                            <progress class="achv-progress" value="0" max="100"></progress><br>
+                            <button type="button">Check-in</button>
+                        </td>
+                        <td class="achv-card">
+                            <img class="achv-img" src="images/profile2.png" alt="Eco Hero"><br>
+                            <b>Eco Hero</b><br>
+                            <span style="font-size: small;">Volunteer at a recycling plant</span><br>
+                            <progress class="achv-progress" value="0" max="1"></progress><br>
+                            <button type="button">Volunteered</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="achv-card">
+                            <img class="achv-img" src="images/waterdrop.png" alt="Shower Saver"><br>
+                            <b>Shower Saver</b><br>
+                            <span style="font-size: small;">Shower less than 8 minutes for a week</span><br>
+                            <progress class="achv-progress" value="0" max="7"></progress><br>
+                            <button type="button">Showered</button>
+                        </td>
+                        <td class="achv-card">
+                            <img class="achv-img" src="images/wasteslayer.png" alt="Waste Slayer"><br>
+                            <b>Waste Slayer</b><br>
+                            <span style="font-size: small;">Clean up litter 15 times</span><br>
+                            <progress class="achv-progress" value="0" max="15"></progress><br>
+                            <button type="button">Cleaned</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="achv-card">
+                            <img class="achv-img" src="images/recycle.png" alt="Recycle-lord"><br>
+                            <b>Recycle-lord</b><br>
+                            <span style="font-size: small;">Do 25 recycling tasks</span><br>
+                            <progress class="achv-progress" value="0" max="25"></progress><br>
+                            <button type="button">Recycled</button>
+                        </td>
+                        <td class="achv-card">
+                            <img class="achv-img" src="images/greenthumb.png" alt="Green Thumb"><br>
+                            <b>Green Thumb</b><br>
+                            <span style="font-size: small;">Plant 10 trees</span><br>
+                            <progress class="achv-progress" value="0" max="10"></progress><br>
+                            <button type="button">Planted</button>
+                        </td>
+                    </tr>
+                </table>
+                
             </p>
         </main>
 
