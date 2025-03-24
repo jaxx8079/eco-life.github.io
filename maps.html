@@ -10,8 +10,8 @@
             <a href="achievements.html">Achievements</a>
             <a href="contact.html">Contact Us</a>
             <a href="about.html">About Us</a>
-            <a href="profile.html">Your Profile</a>
-            <a href="login.html">Login</a>
+            <a href="profile.html" id="profileID" >Profile</a>
+            <a href="login.html" id="loginID" style="display: none;">Login</a>
         </nav>
 
     </div>
@@ -20,15 +20,31 @@
         <title style="text-align: center;">Maps</title>
         <link rel="stylesheet" href="styles.css"> 
         <link rel="icon" href="images/Capture_processed.PNG">
+        <script src="script.js" defer></script>
     </head>
     <body style="justify-content: center;">
         
         <header>
-            <h1 style="text-align: center;">Map for Eco-Habits!</h1>
+            <h1 style="text-align: center;">Eco-Maps near you!</h1>
         </header>
 
         <main>
+            <div class="button-container" style="text-align: center; margin-bottom: 20px;">
+                <button class="map-button" data-target="map">Recycling Centers</button>
+                <button class="map-button" data-target="home">Eco-Life Head Office</button>
+                <button class="map-button" data-target="parks">Popular Parks Nearby</button><br><br>
+                <button class="map-button" data-target="Canada">Canada</button>
+                <button class="map-button" data-target="Ontario">Ontario</button>
+                <button class="map-button" data-target="Nova Scotia">Nova Scotia</button>
+                <button class="map-button" data-target="Saskatchewan">Saskatchewan</button>
+                <button class="map-button" data-target="Quebec">Quebec</button>
+                <button class="map-button" data-target="Newfoundland">Newfoundland</button>
+            </div>
+
             <div class="image-container">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d23022.59970412364!2d-79.33944082677374!3d43.83872715477067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srecycling%20center!5e0!3m2!1sen!2sca!4v1742751987296!5m2!1sen!2sca" width="900" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe id ="home" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.0694116561804!2d-79.31408492298605!3d43.854389971093276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d53d28a8b727%3A0xfd7024bab5e7bbfe!2sYork%20University%20Markham%20Campus!5e0!3m2!1sen!2sca!4v1742758553184!5m2!1sen!2sca" width="900" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe id = "parks" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d46035.22563014439!2d-79.33022126245987!3d43.85164994795595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparks%20markham!5e0!3m2!1sen!2sca!4v1742760899114!5m2!1sen!2sca" width="900" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <figure>
                     <img src="images/canada1.jpg" alt="Canada">
                     <figcaption>Source: <a href="https://melissaarcher.ca/illustrated-maps-of-canada-art-prints/" target="_blank">Melissa Archer</a></figcaption>

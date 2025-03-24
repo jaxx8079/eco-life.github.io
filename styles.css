@@ -17,8 +17,9 @@ Top Header
     left: 0;
     right: 0;
     flex: 1;
-    margin: 0;
+    margin: 0px;
     padding: 15px;
+    z-index: 1000;
 }
 
 header {
@@ -32,6 +33,7 @@ nav {
     align-items: center;
     width: 100%;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -84,6 +86,22 @@ div h1{
 /*
 Leaderboard
 */
+#leaderboardMain {
+    background-image: url(images/galaxy.png);
+    background-size: cover; 
+    background-position: center;
+}
+
+#leaderboardMain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
 
 .leaderboardPage{
     flex: 1;
@@ -93,38 +111,74 @@ Leaderboard
     flex-direction: column;
 }
 
-#leaderboardTable{
-    padding: 1px;
-    border-collapse: collapse;
-    
-    
-}
-
-#leaderboardTable tr{
-    margin: 10px;
-    font-size: 30px;
-    border-bottom: 4px solid;
-    font-weight: 400;
-    
-
-}
-
-#leaderboardTable th, td{
-    padding: 20px 100px;
-    margin: 10px;
-    border-spacing: 10px;
-}
-
 #leaderTitle{
     text-align: center;
     font-size: 60px;
     width: 100%;
+    color:white;
 }
 
 #leaderDes{
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    color: white;
+}
+
+#leaderboardSect{
+    background-color: white;
+    background-color: rgba(71, 69, 69, 0.795);
+    padding: 100px;
+    border-radius: 30px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    
+}
+
+#leaderboardContent1 img{
+    border-radius: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+#leaderboardContent1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#leaderboardContent2, #leaderboardContent3{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#leaderboardContent2 img,
+#leaderboardContent3 img{
+    border-radius: 200px;
+    width: 100px;
+    height: 100px;
+    margin-left: 25px;
+}
+
+#leaderboardContent2 p {
+    color: silver;
+}
+
+#leaderboardContent3 p {
+    color: burlywood;
+}
+
+
+#leaderboardContent1 p {
+    font-size: 30px;
+    color: gold;
 }
 /*
 Community
@@ -177,7 +231,8 @@ Community
 }
 
 .like-btn {
-    background-color: rgb(37, 137, 245);
+    background-color: rgb(144, 151, 158);
+    transition: background-color 0.3s ease;
 }
 
 .reply-btn:hover {
@@ -186,6 +241,89 @@ Community
 
 .like-btn:hover {
     background-color: rgb(37, 100, 190);
+}
+
+.like-btn.liked {
+    background-color: rgb(37, 137, 245);
+}
+
+.like-btn.liked:hover {
+    background-color: rgb(79, 83, 87);
+}
+
+.like-btn.no-hover:hover {
+    background-color: rgb(37, 137, 245) !important;
+}
+
+.like-btn.no-hover-liked:hover {
+    background-color: rgb(144, 151, 158) !important;
+}
+
+.separate-reply-div {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 63px;
+}
+
+.separate-reply-div::before {
+    content: "";
+    position: absolute;
+    left: 51px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+    opacity: 50%;
+}
+
+.reply-section {
+    margin: 17px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.reply-input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(173, 162, 162);
+}
+
+.submit-reply-btn {
+    background-color: rgb(69, 201, 102);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-reply-btn:hover {
+    background-color: rgb(34, 131, 59);
+}
+
+.comment {
+    position: relative;
+    background-color: white;
+    border: 1px solid rgb(221, 213, 213);
+    padding: 15px;
+    margin: 15px;
+    margin-left: 80px;
+    border-radius: 25px;
+}
+
+.comment::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+    opacity: 50%;
 }
 
 /*
@@ -198,14 +336,32 @@ Maps
     gap: 20px;
 }
 .image-container img {
-    width: 450px;
-    height: 400px;
+    width: 900px;
+    height: 800px;
     object-fit: cover;
 }
 .image-container img.tall {
-    height: 600px;
+    width: 650px;
 }
-
+.image-container figure,
+.image-container iframe {
+    display: none;
+}
+.map-button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+.map-button:hover {
+    background: darkgreen;
+}
+.map-button:focus {
+    outline: none;
+}
 /*
 Achievements
 */
@@ -240,6 +396,23 @@ About
 
 .about-us {
     text-align: center;
+    margin: 20px;
+}
+
+.about-text {
+    display: inline-block;
+    background-color: white;
+    border: 2px solid rgb(116, 196, 116);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .about-us img {
@@ -253,126 +426,196 @@ About
 Eco-stats
 */
 
-.profile{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    display: block;
-}
-
-.profile-container{
+#mainContent{
+    flex: 1;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content:left;
+    flex-wrap: wrap;
+    overflow: hidden;
+
 }
 
-.todo {
+#profileContent{
+    width: 650px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: white;
+    margin-top: 40px;
+    align-self: flex-start;
+    margin-left: 200px;
+
+    
+}
+
+#profileImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#sidebarsContent {
+    width: 700px;
     display: flex;
     flex-direction: column;
-}
-
-.todo label{
-    flex: 1;
-    padding-left: 20px;
-}
-
-.todo label:hover{
-    cursor: pointer;
-}
-
-.todo div{
-    display: flex;
-    background-color: white;
-    border: 2px solid;
-    border-radius: 25px;
-    width: 370px;
-    font-size: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 10px;
-    padding: 10px;
     gap: 20px;
+    margin-left: 50px;
+    margin-top: 40px;
+    height: 890px;
+    overflow: hidden; 
+}
+#progressContent, #todoContent{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 30%;
 }
 
-.todo div:hover{
-    background-color: rgb(226, 226, 226);
-    cursor: pointer;
+#postContent tr,td{
+    border: 2px solid;
+    flex: 1;
+    padding: 0%;
 }
 
-.todo input[type="checkbox"]{
+#postContent img {
+    width: 130px;
+    margin: 0%;
+}
+
+#postContent{
+    margin: 0 auto; 
+    border-collapse: collapse;
+    height: 400px;
+}
+
+#todoContent {
+    font-size: 30px;
+    overflow-y: hidden;
+    flex-grow: 1;
+}
+
+#myProfileSection{
+    text-align: left;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.profileTable {
+    border-collapse: collapse;
+    border: none;
+  }
+  
+  .profileTable td,
+  .profileTable tr {
+    border: none;
+    padding-right: 120px;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+
+  #logOut{
+    width: 100px;
+    height: 30px;
+    border-radius: 40px;
+    margin-top: 20px;
+    background-color: lightblue;
+    font-weight: bold;
+    color: white;
+  }
+
+  #progressBarContainer {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  #progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 0.3s ease-in-out;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  .todo input[type="checkbox"]{
     width: 30px;
     height: 30px;
     margin-left: 20px;
 }
 
-.todo input[type="checkbox"]:hover {
-    cursor: pointer;
-}
-
-#todoName{
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#userNameTodo{
-    font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-}
-
-#ecostats, #todoName{
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#profile-posts {
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    margin-right: auto;
-}
-
-.stats-todo-container-contents {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
-    margin-left: 58.5%;
-}
-
-.stats-todo-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 11.5%;
-    gap: 205px
-}
-
-.stats td{
-    padding: 10px;
-}
-
-.stats td:first-child{
-    text-align: left;
-    width: 70%;
-}
-
-.stats td:last-child{
-    text-align: right;
-}
-
-.stats tr{
-    display: flex;
-    background-color: white;
-    border: 2px solid;
-    border-radius: 25px;
+#buttonDiv button{
+    width: 200px;
+    height: 60px;
+    border-radius: 40px;
+    margin-top: 90px;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 10px;
-    gap: 20px;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.todo {
+    height: 400px;
+}
+
+#statusBar {
+    padding-left: 520px;
+}
+
+#tasksDone {
+    padding-left: 520px;
+}
+
+#recordsTable tr, 
+#recordsTable td {
+    border: none;
+    margin: 30px;
+    padding-top: 30px;
+    font-size: 19px;
+}
+
+/*
+Login
+*/
+
+#loginForm {
+    display: block;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: white;
+    margin-top: 200px;
+}
+
+#loginForm input[type="submit"] {
+    width: 100px;
+    height: 30px;
+    border-radius: 40px;
+    margin-top: 20px;
+    background-color: lightgreen;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+    color: rgb(80, 60, 60);
+}
+
+#loginForm input[type="submit"]:hover {
+    background-color: rgb(75, 182, 75);
+    color: white;
 }

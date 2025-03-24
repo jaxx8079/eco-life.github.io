@@ -5,8 +5,9 @@
         <title>leaderboards</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="images/Capture_processed.PNG">
+        <script src="script.js"></script>
     </head>
-    <body>
+    <body id="leaderboardMain">
 
         <div id="topheader">
             <nav>
@@ -17,8 +18,8 @@
                 <a href="achievements.html">Achievements</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="about.html">About Us</a>
-                <a href="profile.html">Your Profile</a>
-                <a href="login.html">Login</a>
+                <a href="profile.html" id="profileID">Profile</a>
+                <a href="login.html" id="loginID" style="display: none;">Login</a>
             </nav>  
         </div>
 
@@ -28,123 +29,23 @@
 
         <main class="leaderboardPage">
             <p id="leaderDes">The leaderboard shows who your competitors are to become the most eco-friendliest of the world.<br>So get ready to become the number 1 of the world</p>
-            <table id="leaderboardTable">
-                <tr>
-                   <th>Username</th> 
-                   <th>Eco-Points</th>
-                   <th>Rank</th>
-                </tr>
-                <tr>
-                    <td>
-                        JamieTheGreenFen12
-                    </td>
-                    <td>
-                        2,890,600 
-                    </td>
-                    <td>
-                        1
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        IAMGarden88 
-                    </td>
-                    <td>
-                        2,889,060
-                    </td>
-                    <td>
-                        2
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        IAMGROOT
-                    </td>
-                    <td>
-                        2,799,890
-                    </td>
-                    <td>
-                        3
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Legendaryyyy!
-                    </td>
-                    <td>
-                        2,789,830
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        LetsPutonAShow12
-                    </td>
-                    <td>
-                        2,730,888
-                    </td>
-                    <td>
-                        5
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        FriendsGatherAround80
-                    </td>
-                    <td>
-                        2,695,690
-                    </td>
-                    <td>
-                        6
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        fEArbasT45
-                    </td>
-                    <td>
-                        2,679,890
-                    </td>
-                    <td>
-                        7
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        GodofLightening78
-                    </td>
-                    <td>
-                        2,599,000
-                    </td>
-                    <td>
-                        8
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Themoon45
-                    </td>
-                    <td>
-                        2,396,999
-                    </td>
-                    <td>
-                        9
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        MaxPulse45
-                    </td>
-                    <td>
-                        2,001,097
-                    </td>
-                    <td>
-                        10
-                    </td>
-                </tr>            
-            </table>
+            <div id="leaderboardSect">
+                <div id="leaderboardContent1">
+                    <p>1.</p>
+                    <img src="images/profile7.png" alt="profile photos">
+                    <p>GardenLover123</p>
+                </div>
+                <div id="leaderboardContent2">
+                    <p>2.</p>
+                    <img src="images/greenthumb.png" alt="profile photos">
+                    <p>MarkZuck</p>
+                </div>
+                <div id="leaderboardContent3">
+                    <p>3.</p>
+                    <img src="images/recycle.png"  alt="profile photos">
+                    <p>ImmGreenFist</p>
+                </div>
+            <div>
         </main>
         
     </body>

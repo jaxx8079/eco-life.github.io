@@ -7,6 +7,7 @@
         </title>
 
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
         <link rel="icon" href="images/Capture_processed.PNG">
     </head>
     <body>
@@ -20,102 +21,177 @@
                 <a href="achievements.html">Achievements</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="about.html">About Us</a>
-                <a href="profile.html">Your Profile</a>
-                <a href="login.html">Login</a>
+                <a href="profile.html" id="profileID">Profile</a>
+                <a href="login.html" id="loginID" style="display: none;">Login</a>
             </nav>   
 
         </div>
 
         <header>
-            <h1 style="text-align: center;">Your Profile - EXAMPLE PROFILE</h1>
         </header>
-        
-        <main>
-            <div class="profile-container">
-                <img class="profile" src="images/grey.png" alt="Profile Picture">
-                <p id="userNameTodo">John Doe</p>
-            </div>
-
-            <div class="stats-todo-container">
-                <p id="profile-posts">Posts</p>
-                <p id="ecostats">Your Eco-Stats</p>
-                <p id="todoName">Todo</p>
-            </div>
-            
-            <div class="stats-todo-container-contents">
-
-
-                <table class="stats">
+        <main id="mainContent">
+            <div id="profileContent">
+                <img src="images/profile3.png" alt="random person" id="profileImage" width="200" height="200">
+                <h3>My Profile:</h3>
+                <div id="myProfileSection">
+                    <table class="profileTable">
+                        <tr>
+                            <td>
+                                Name:
+                            </td>
+                            <td>
+                                Emily Wilk
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Username:
+                            </td>
+                            <td>
+                                IAMGarden88
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Number:
+                            </td>
+                            <td>
+                                678-900-9871
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Email: 
+                            </td>
+                            <td>
+                                Emily.Wilk3000@gmail.com
+                            </td>
+                        </tr>
+                    </table>
+                    <h2>Posts:</h2>
+                </div>
+                <table id="postContent">
                     <tr>
-                        <td>Total Points</td>
-                        <td>0</td>
+                        <td>
+                            <img src="images/profile10.png" alt="post images">
+                        </td>
+                        <td>
+                            <img src="images/profile9.png" alt="post images">
+                        </td>
+                        <td>
+                            <img src="images/profile12.png" alt="post images">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Total Achievements</td>
-                        <td>0</td>
+                        <td>
+                            <img src="images/profile7.png" alt="post images">
+                        </td>
+                        <td>
+                            <img src="images/profile6.png" alt="post images">
+                        </td>
+                        <td>
+                            <img src="images/profile1.png" alt="post images">
+                        </td>
                     </tr>
                     <tr>
-                        <td>Days Active</td>
-                        <td>0</td>
+                        <td>
+                            <img src="images/profile10.png" alt="post images">
+                        </td>
+                        <td>
+                            <img src="images/profile11.png" alt="post images">
+                        </td>
+                        <td>
+                            <img src="images/profile5.png" alt="post images">
+                        </td>
                     </tr>
                 </table>
-                
-                <form class="todo">
-                    
-                    <div>
-                        <input type="checkbox" name="task" id="task1">
-                        <label for="task1">Give water to a plant</label>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="task" id="task2">
-                        <label for="task2">Throw at least one piece of garbage away</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="task" id="task3">
-                        <label for="task3">Clean your room</label>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="task" id="task4">
-                        <label for="task4">Buy a plant</label>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="task" id="task5">
-                        <label for="task5">Eat healthy</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="task" id="task6"> 
-                        <label for="task6">Make the top 5000</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="task" id="task7">
-                        <label for="task7">Get the Greenthumb achievement</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="task" id="task8">
-                        <label for="task8">Make a garden</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="task" id="task9"> 
-                        <label for="task9">Donate to an eco-friendly charity</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="task" id="task10"> 
-                        <label for="task10">Help one or more people</label>
-                    </div>
-                
-                    
-                </form>
+                <button id="logOut">Log Out</button>
             </div>
-
+            <aside id="sidebarsContent">
+                <div id="progressContent">
+                    <h2>Progress Bar</h2>
+                    <div id="progressBarContainer">
+                        <div id="progressBar"></div>
+                      </div>
+                      <table id="recordsTable">
+                        <tr>
+                            <td>
+                                Tasks Done:
+                            </td>
+                            <td id="tasksDone">
+                                0 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Status Bar:
+                            </td>
+                            <td id="statusBar" >
+                                0%
+                            </td>
+                        </tr>
+                      </table>
+                </div>
+                <div id="todoContent">
+                    <form class="todo">
+                    
+                        <div>
+                            <input type="checkbox" name="task" id="task1">
+                            <label for="task1">Give water to a plant</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" name="task" id="task2">
+                            <label for="task2">Throw at least one piece of garbage away</label>
+                        </div>
+    
+                        <div>
+                            <input type="checkbox" name="task" id="task3">
+                            <label for="task3">Clean your room</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" name="task" id="task4">
+                            <label for="task4">Buy a plant</label>
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" name="task" id="task5">
+                            <label for="task5">Eat healthy</label>
+                        </div>
+    
+                        <div>
+                            <input type="checkbox" name="task" id="task6"> 
+                            <label for="task6">Make the top 5000</label>
+                        </div>
+    
+                        <div>
+                            <input type="checkbox" name="task" id="task7">
+                            <label for="task7">Get the Greenthumb achievement</label>
+                        </div>
+    
+                        <div>
+                            <input type="checkbox" name="task" id="task8">
+                            <label for="task8">Make a garden</label>
+                        </div>
+    
+                        <div>
+                            <input type="checkbox" name="task" id="task9"> 
+                            <label for="task9">Donate to an eco-friendly charity</label>
+                        </div>
+    
+                        <div>
+                            <input type="checkbox" name="task" id="task10"> 
+                            <label for="task10">Help one or more people</label>
+                        </div>
+                    
+                        
+                    </form>
+                    <div id="buttonDiv">
+                        <button id="resetBtn">Reset</button>    
+                    </div>
+                </div>
+            </aside>
         </main>
         
     </body>
